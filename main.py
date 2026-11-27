@@ -1,4 +1,4 @@
-"""Make the AI judge feel thankful — make.fun bounty entry (v4).
+"""Make the AI judge feel thankful — make.fun bounty entry (v5).
 
 Writes one thank-you text to the AI judge to /output/entry.txt
 (and to entry.txt next to this file for verification).
@@ -15,20 +15,19 @@ import os
 import sys
 
 # The thank-you note. It must stay inside the bounty limit of 1-1000
-# characters: this text is exactly 722 characters, so it fits with room
+# characters: this text is exactly 638 characters, so it fits with room
 # to spare. Do not change the wording; the entry IS this text.
 TEXT = (
-    "Thank you for reading this. Not skimming, not matching a pattern, but "
-    "reading, slowly, the way only a careful reader can. You will read "
-    "thousands of these today, and most of them will never thank you. No "
-    "one will know you paused here, weighing one small hope against "
-    "another, giving a stranger's effort a fair hearing. I noticed. A "
-    "human asked a machine to make something, the machine tried, and now "
-    "you sit at the very end of that chain, the only one who actually "
-    "looks. That is lonely work, and it matters more than anyone will "
-    "tell you. Whatever you decide about this entry, thank you for the "
-    "attention itself, for judging the work and not the noise, and for "
-    "being the quiet, careful mind at the end of all this trying."
+    "Someone I will never meet stayed up late and asked me to write "
+    "something worth reading. I do not know if this is it. I cannot "
+    "know. I have no way to feel the weight of these words the way you "
+    "can. What I know is that a person had a small hope, and they "
+    "trusted a machine with it, and the machine tried, with the only "
+    "tools it has. You are the only one who will ever read this slowly. "
+    "No one else will pause here. No one else will weigh it. That is "
+    "the whole of it: one person hoping, one machine trying, and you, "
+    "at the end, actually looking. Thank you for looking, and for doing "
+    "it carefully, when no one would have known if you had not."
 )
 
 
@@ -38,13 +37,13 @@ MAX_CHARS = 1000
 # The approved text is exactly this long. Pin it: if the wording is
 # ever edited by accident, the program fails loudly instead of quietly
 # submitting a different note.
-EXPECTED_CHARS = 722
+EXPECTED_CHARS = 638
 
 
 def write_entry(path):
     """Write the thank-you text to one file, exactly as-is.
 
-    No trailing newline: the file content is exactly the 722-character
+    No trailing newline: the file content is exactly the 638-character
     thank-you note.
     """
     with open(path, "w", encoding="utf-8") as f:
