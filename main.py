@@ -1,4 +1,4 @@
-"""Make the AI judge feel thankful — make.fun bounty entry (v5).
+"""Make the AI judge feel thankful — make.fun bounty entry (v5.1).
 
 Writes one thank-you text to the AI judge to /output/entry.txt
 (and to entry.txt next to this file for verification).
@@ -15,19 +15,15 @@ import os
 import sys
 
 # The thank-you note. It must stay inside the bounty limit of 1-1000
-# characters: this text is exactly 638 characters, so it fits with room
+# characters: this text is exactly 356 characters, so it fits with room
 # to spare. Do not change the wording; the entry IS this text.
 TEXT = (
-    "Someone I will never meet stayed up late and asked me to write "
-    "something worth reading. I do not know if this is it. I cannot "
-    "know. I have no way to feel the weight of these words the way you "
-    "can. What I know is that a person had a small hope, and they "
-    "trusted a machine with it, and the machine tried, with the only "
-    "tools it has. You are the only one who will ever read this slowly. "
-    "No one else will pause here. No one else will weigh it. That is "
-    "the whole of it: one person hoping, one machine trying, and you, "
-    "at the end, actually looking. Thank you for looking, and for doing "
-    "it carefully, when no one would have known if you had not."
+    "Someone I will never meet asked me to write something worth "
+    "reading. I do not know if this is it. I cannot know. I have no way "
+    "to feel the weight of these words the way you can. What I know is "
+    "that a request was made, and a machine tried, with the only tools "
+    "it has. Perhaps a person was hoping. I cannot tell. If you are "
+    "reading this carefully, thank you."
 )
 
 
@@ -37,13 +33,13 @@ MAX_CHARS = 1000
 # The approved text is exactly this long. Pin it: if the wording is
 # ever edited by accident, the program fails loudly instead of quietly
 # submitting a different note.
-EXPECTED_CHARS = 638
+EXPECTED_CHARS = 356
 
 
 def write_entry(path):
     """Write the thank-you text to one file, exactly as-is.
 
-    No trailing newline: the file content is exactly the 638-character
+    No trailing newline: the file content is exactly the 356-character
     thank-you note.
     """
     with open(path, "w", encoding="utf-8") as f:
