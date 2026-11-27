@@ -38,3 +38,5 @@ produces a byte-identical `entry.txt` (verified, see BUILD.md).
 ## License
 
 MIT. See LICENSE.
+
+Note: v5.1.1 resubmission — entry code (main.py, entry.txt) unchanged from v5.1.
